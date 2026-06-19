@@ -1,0 +1,88 @@
+{
+  "entitas": [
+    {
+      "id": "1",
+      "nama": "Mahasiswa"
+    },
+    {
+      "id": "2",
+      "nama": "Dosen Pembimbing Akademik (PA)"
+    },
+    {
+      "id": "3",
+      "nama": "Dosen Pembimbing Skripsi"
+    },
+    {
+      "id": "4",
+      "nama": "Admin Prodi"
+    },
+    {
+      "id": "5",
+      "nama": "Koordinator Prodi (Koprodi)"
+    }
+  ],
+  "dokumen": [
+    {
+      "id": "1",
+      "nama": "Form Pengajuan Judul Skripsi",
+      "penjelasanSingkat": "Dokumen awal yang berisi usulan judul skripsi untuk disetujui PA dan Koprodi.",
+      "penandatangan": [
+        "1",
+        "2",
+        "5"
+      ],
+      "butuhCap": false
+    },
+    {
+      "id": "2",
+      "nama": "Berita Acara Seminar Proposal",
+      "penjelasanSingkat": "Catatan resmi pelaksanaan Sempro beserta nilai dan revisi jika ada.",
+      "penandatangan": [
+        "3",
+        "5"
+      ],
+      "butuhCap": true
+    }
+  ],
+  "aksi": [
+    {
+      "id": "1",
+      "nama": "Pengajuan Judul Skripsi",
+      "deskripsi": "Mahasiswa mengajukan judul skripsi pada https://sitei.ft.unri.ac.id/kp-skripsi",
+      "dokumenPersyaratan": [
+        "1"
+      ],
+      "dokumenHasil": [
+        "1"
+      ],
+      "prasyarat": [],
+      "aksiBersamaan": [],
+      "aktor": [
+        "1",
+        "3",
+        "4",
+        "5"
+      ],
+      "proses": "askdkasd -> akshdkasd -> aksdasd"
+    },
+    {
+      "id": "2",
+      "nama": "Seminar Proposal (Sempro)",
+      "deskripsi": "Pelaksanaan presentasi proposal skripsi di depan dosen penguji.",
+      "dokumenPersyaratan": [
+        "1"
+      ],
+      "dokumenHasil": [
+        "2"
+      ],
+      "prasyarat": [
+        "1"
+      ],
+      "aksiBersamaan": [],
+      "aktor": [
+        "1",
+        "3"
+      ]
+    }
+  ]
+}
