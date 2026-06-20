@@ -1,4 +1,7 @@
-const API_URL = 'http://localhost:3001/api';
+const API_URL = import.meta.env.DEV 
+  ? 'http://localhost:3001/api' 
+  : '/api';
+
 
 export const fetchData = async (model) => {
   const res = await fetch(`${API_URL}/${model}`);
